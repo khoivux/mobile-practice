@@ -5,6 +5,7 @@ import MusicApp from '../src/apps/MusicApp/MusicApp';
 import WeatherApp from '../src/apps/WeatherApp/WeatherApp';
 import StudentManager from '../src/apps/StudentManager/StudentManager';
 import StudentManagerRoom from '../src/apps/StudentManagerRoom/StudentManagerRoom'; // New ORM Version
+import SocialNavigatorApp from '../src/apps/SocialNavigatorApp/SocialNavigatorApp'; // Integrated Nav App
 import { AppConfig } from '../src/config/AppConfig';
 
 export default function App() {
@@ -22,6 +23,8 @@ export default function App() {
       return <StudentManager />;
     case 'STUDENT_MANAGER_ROOM': // Handle the ORM version
       return <StudentManagerRoom />;
+    case 'SOCIAL_NAVIGATOR':
+      return <SocialNavigatorApp />;
     default:
       return <WeatherApp />;
   }
